@@ -45,6 +45,20 @@ appends additional texts to the file resultado so that our
 solution detects that it is only the existence of the file that
 matters.
 
+```C++
+541 if(melhorProp >= P_arq){
+542		printf("\n\nCaso numero %2d\n%3d Rotas ciclicas\nProporcao de lucro desejada %.2lf\nMelhor proporcao de lucro encontrada %.2lf\nRelacao lucro encontrado com o esperado %.2lf\n", n_caso,n_ciclos, P_arq,melhorProp, melhorProp / P_arq);
+543		resultado = fopen("resultados.txt","a");
+544		if(!resultado){
+545			printf("Falha ao abrir/criar o arquivo");
+546			exit(1);
+547		}
+  ...
+  }
+```
+
+Output snipple:
+
 ```shell
 Line 306 : n
 ...
